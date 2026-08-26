@@ -8,7 +8,7 @@
 
     <meta
         name="description"
-        content="Dagoberto Montoya, CEO de NETEL. Soluciones en redes, comunicación y pantallas comerciales."
+        content="Dagoberto Montoya, CEO de NETEL. Soluciones en redes, comunicación y venta de pantallas comerciales."
     >
 
     <style>
@@ -33,12 +33,14 @@
             min-height: 100vh;
         }
 
+
         /* =========================
            ENCABEZADO
         ========================= */
 
         .hero {
             position: relative;
+
             background:
                 radial-gradient(
                     circle at 15% 20%,
@@ -60,10 +62,18 @@
             color: white;
             text-align: center;
 
-            padding: 42px 20px 85px;
+            /*
+             * MÁS ESPACIO ABAJO
+             * para que la foto pueda salir
+             * completamente del encabezado.
+             */
+            padding: 42px 20px 125px;
 
-            overflow: hidden;
+            overflow: visible;
+
+            border-radius: 0 0 45% 45% / 0 0 15% 15%;
         }
+
 
         .hero::before {
             content: "";
@@ -79,7 +89,10 @@
 
             right: -100px;
             top: -120px;
+
+            pointer-events: none;
         }
+
 
         .hero::after {
             content: "";
@@ -95,11 +108,13 @@
 
             left: -120px;
             bottom: -150px;
+
+            pointer-events: none;
         }
 
 
         /* =========================
-           LOGO NETEL
+           NETEL
         ========================= */
 
         .netel-logo {
@@ -114,6 +129,7 @@
             margin-bottom: 5px;
         }
 
+
         .netel-line {
             width: 180px;
             height: 3px;
@@ -124,6 +140,7 @@
 
             border-radius: 10px;
         }
+
 
         .netel-services {
             position: relative;
@@ -137,21 +154,27 @@
 
 
         /* =========================
-           FOTO
+           FOTO DE PERFIL
         ========================= */
 
         .photo-container {
+
             position: absolute;
 
-            z-index: 5;
+            z-index: 10;
 
             left: 50%;
-            bottom: -76px;
+
+            /*
+             * Ahora queda centrada en la
+             * parte inferior del encabezado.
+             */
+            bottom: -78px;
 
             transform: translateX(-50%);
 
-            width: 155px;
-            height: 155px;
+            width: 156px;
+            height: 156px;
 
             border-radius: 50%;
 
@@ -163,11 +186,17 @@
                 0 10px 35px rgba(0,0,0,0.25);
         }
 
+
         .photo-container img {
+
+            display: block;
+
             width: 100%;
             height: 100%;
 
             object-fit: cover;
+
+            object-position: center;
 
             border-radius: 50%;
         }
@@ -178,12 +207,16 @@
         ========================= */
 
         .content {
+
             max-width: 540px;
 
             margin: 0 auto;
 
+            /*
+             * ESPACIO PARA LA FOTO
+             */
             padding:
-                100px
+                105px
                 18px
                 40px;
         }
@@ -194,12 +227,15 @@
         ========================= */
 
         .profile {
+
             text-align: center;
 
             margin-bottom: 30px;
         }
 
+
         .profile h1 {
+
             font-size: 32px;
 
             font-weight: 800;
@@ -207,7 +243,9 @@
             margin-bottom: 5px;
         }
 
+
         .profile .position {
+
             color: #d00000;
 
             font-size: 20px;
@@ -219,7 +257,9 @@
             margin-bottom: 14px;
         }
 
+
         .profile p {
+
             color: #555;
 
             font-size: 16px;
@@ -233,6 +273,7 @@
         ========================= */
 
         .button {
+
             display: flex;
 
             align-items: center;
@@ -261,11 +302,15 @@
                 box-shadow 0.2s;
         }
 
+
         .button:active {
+
             transform: scale(0.98);
         }
 
+
         .button.primary {
+
             color: white;
 
             background:
@@ -278,7 +323,9 @@
             border: none;
         }
 
+
         .button-left {
+
             display: flex;
 
             align-items: center;
@@ -286,7 +333,9 @@
             gap: 15px;
         }
 
+
         .icon {
+
             width: 45px;
             height: 45px;
 
@@ -306,18 +355,25 @@
             flex-shrink: 0;
         }
 
+
         .primary .icon {
+
             background: white;
+
             color: #d00000;
         }
 
+
         .button-title {
+
             font-size: 17px;
 
             font-weight: 750;
         }
 
+
         .button-subtitle {
+
             font-size: 13px;
 
             color: #777;
@@ -325,17 +381,23 @@
             margin-top: 3px;
         }
 
+
         .primary .button-subtitle {
+
             color: #ffe1e1;
         }
 
+
         .arrow {
+
             font-size: 30px;
 
             color: #d00000;
         }
 
+
         .primary .arrow {
+
             color: white;
         }
 
@@ -345,6 +407,7 @@
         ========================= */
 
         .section-title {
+
             text-align: center;
 
             margin:
@@ -357,7 +420,9 @@
             font-weight: 800;
         }
 
+
         .services {
+
             display: grid;
 
             grid-template-columns:
@@ -366,7 +431,9 @@
             gap: 10px;
         }
 
+
         .service {
+
             background: white;
 
             border-radius: 18px;
@@ -379,13 +446,17 @@
                 0 5px 18px rgba(0,0,0,0.07);
         }
 
+
         .service-icon {
+
             font-size: 30px;
 
             margin-bottom: 10px;
         }
 
+
         .service h3 {
+
             font-size: 14px;
 
             color: #c40000;
@@ -393,7 +464,9 @@
             margin-bottom: 7px;
         }
 
+
         .service p {
+
             font-size: 11px;
 
             line-height: 1.4;
@@ -407,6 +480,7 @@
         ========================= */
 
         .banner {
+
             margin-top: 25px;
 
             padding: 22px;
@@ -428,13 +502,17 @@
                 0 8px 25px rgba(180,0,0,0.20);
         }
 
+
         .banner h2 {
+
             font-size: 18px;
 
             margin-bottom: 7px;
         }
 
+
         .banner p {
+
             font-size: 13px;
 
             opacity: 0.9;
@@ -446,6 +524,7 @@
         ========================= */
 
         footer {
+
             text-align: center;
 
             padding:
@@ -458,27 +537,119 @@
             font-size: 12px;
         }
 
+
         footer strong {
+
             color: #c40000;
         }
 
 
         /* =========================
-           RESPONSIVE
+           CELULARES
         ========================= */
 
-        @media (max-width: 400px) {
+        @media (max-width: 600px) {
+
+            .hero {
+
+                padding:
+                    38px
+                    15px
+                    120px;
+
+                border-radius:
+                    0 0 40% 40% /
+                    0 0 12% 12%;
+            }
+
 
             .netel-logo {
-                font-size: 42px;
+
+                font-size: 43px;
             }
+
+
+            .netel-services {
+
+                font-size: 10px;
+
+                letter-spacing: 3px;
+            }
+
+
+            .photo-container {
+
+                width: 150px;
+                height: 150px;
+
+                bottom: -75px;
+            }
+
+
+            .content {
+
+                padding-top: 105px;
+            }
+
 
             .profile h1 {
-                font-size: 28px;
+
+                font-size: 29px;
             }
 
+
+            .profile .position {
+
+                font-size: 18px;
+            }
+
+
             .services {
+
                 grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        /* =========================
+           CELULARES PEQUEÑOS
+        ========================= */
+
+        @media (max-width: 380px) {
+
+            .netel-logo {
+
+                font-size: 39px;
+            }
+
+
+            .netel-services {
+
+                font-size: 9px;
+
+                letter-spacing: 2px;
+            }
+
+
+            .photo-container {
+
+                width: 140px;
+                height: 140px;
+
+                bottom: -70px;
+            }
+
+
+            .content {
+
+                padding-top: 100px;
+            }
+
+
+            .profile h1 {
+
+                font-size: 27px;
             }
 
         }
@@ -501,14 +672,16 @@
             NETEL
         </div>
 
+
         <div class="netel-line"></div>
+
 
         <div class="netel-services">
             REDES • COMUNICACIÓN • PANTALLAS
         </div>
 
 
-        <!-- FOTO DEL CLIENTE -->
+        <!-- FOTO -->
 
         <div class="photo-container">
 
@@ -538,9 +711,11 @@
                 Dagoberto Montoya
             </h1>
 
+
             <div class="position">
                 CEO · NETEL
             </div>
+
 
             <p>
                 Soluciones en redes y comunicación
@@ -565,11 +740,13 @@
                     💬
                 </div>
 
+
                 <div>
 
                     <div class="button-title">
                         WhatsApp
                     </div>
+
 
                     <div class="button-subtitle">
                         +504 9930-1695
@@ -578,6 +755,7 @@
                 </div>
 
             </div>
+
 
             <div class="arrow">
                 ›
@@ -600,11 +778,13 @@
                     ☎
                 </div>
 
+
                 <div>
 
                     <div class="button-title">
                         Llamar ahora
                     </div>
+
 
                     <div class="button-subtitle">
                         +504 9930-1695
@@ -613,6 +793,7 @@
                 </div>
 
             </div>
+
 
             <div class="arrow">
                 ›
@@ -624,11 +805,11 @@
 
         <!-- UBICACIÓN -->
 
-      <a
-    class="button"
-    href="https://www.google.com/maps/search/?api=1&query=Residencial+Santa+Mónica+San+Pedro+Sula+Honduras"
-    target="_blank"
->
+        <a
+            class="button"
+            href="https://www.google.com/maps/search/?api=1&query=Residencial+Santa+Mónica+San+Pedro+Sula+Honduras"
+            target="_blank"
+        >
 
             <div class="button-left">
 
@@ -636,19 +817,22 @@
                     📍
                 </div>
 
+
                 <div>
 
                     <div class="button-title">
                         Ver ubicación
                     </div>
 
+
                     <div class="button-subtitle">
-                        San Pedro Sula, Honduras
+                        SPS, Residencial Santa Mónica
                     </div>
 
                 </div>
 
             </div>
+
 
             <div class="arrow">
                 ›
@@ -676,9 +860,11 @@
                     🌐
                 </div>
 
+
                 <h3>
                     REDES
                 </h3>
+
 
                 <p>
                     Diseño e implementación
@@ -696,9 +882,11 @@
                     📡
                 </div>
 
+
                 <h3>
                     COMUNICACIÓN
                 </h3>
+
 
                 <p>
                     Soluciones tecnológicas
@@ -716,9 +904,11 @@
                     🖥️
                 </div>
 
+
                 <h3>
                     PANTALLAS
                 </h3>
+
 
                 <p>
                     Venta de pantallas
@@ -743,6 +933,7 @@
                 SOLUCIONES TECNOLÓGICAS
                 PARA TU NEGOCIO
             </h2>
+
 
             <p>
                 Conectamos tu empresa
